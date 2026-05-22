@@ -7,8 +7,6 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-bin/
-!bin/cli.js
 build/
 develop-eggs/
 dist/
