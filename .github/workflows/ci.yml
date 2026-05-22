@@ -53,7 +53,7 @@ jobs:
         run: npm ci
 
       - name: Run Aegis on itself
-        run: npx @optimistotaku/aegis-scan . --fail-on HIGH --format markdown --output aegis-report.md
+        run: node bin/cli.js . --fail-on HIGH --format markdown --output aegis-report.md
 
       - name: Upload Aegis report
         if: always()
