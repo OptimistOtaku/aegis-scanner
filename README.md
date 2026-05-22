@@ -3,7 +3,7 @@
 [![npm version](https://img.shields.io/npm/v/@optimistotaku/aegis-scan)](https://www.npmjs.com/package/@optimistotaku/aegis-scan)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 [![Node ≥18](https://img.shields.io/badge/node-%E2%89%A518-green)](https://nodejs.org)
-[![CI](https://github.com/optimistotaku/aegis/actions/workflows/ci.yml/badge.svg)](https://github.com/optimistotaku/aegis/actions)
+[![CI](https://github.com/OptimistOtaku/aegis-scanner/actions/workflows/ci.yml/badge.svg)](https://github.com/OptimistOtaku/aegis-scanner/actions/workflows/ci.yml)
 
 **Catch what generic scanners miss.** Aegis is purpose-built for the threat surface of AI-driven codebases — hallucinated dependencies, prompt injection boundaries, PII flowing raw into model APIs, and agentic loop topologies — all in a single scan, zero config required.
 
