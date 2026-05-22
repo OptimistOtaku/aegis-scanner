@@ -50,14 +50,28 @@ if (!pythonCmd) {
 const isCI = process.env.CI || process.env.GITHUB_ACTIONS;
 if (isCI) {
     console.log('🤖 CI/CD detected. Setting up pytest & PyYAML dynamically...');
+    
+    // Ensure pip is present
     try {
-        execSync(`${pythonCmd} -m pip install --upgrade pip`, { stdio: 'inherit' });
-        execSync(`${pythonCmd} -m pip install pytest PyYAML`, { stdio: 'inherit' });
+        execSync(`${pythonCmd} -m ensurepip --default-pip`, { stdio: 'ignore' });
+    } catch (e) {
+        // ignore
+    }
+
+    try {
+        console.log('Installing dependencies with --break-system-packages...');
+        execSync(`${pythonCmd} -m pip install pytest PyYAML --break-system-packages`, { stdio: 'inherit' });
         console.log('✅ CI Python Dependencies successfully configured!\n');
     } catch (e) {
-        console.error('❌ Error setting up python dependencies in CI environment:');
-        console.error(e.message || e);
-        process.exit(1);
+        console.log('Falling back to standard pip install...');
+        try {
+            execSync(`${pythonCmd} -m pip install pytest PyYAML`, { stdio: 'inherit' });
+            console.log('✅ CI Python Dependencies successfully configured!\n');
+        } catch (err) {
+            console.error('❌ Error setting up python dependencies in CI environment:');
+            console.error(err.message || err);
+            process.exit(1);
+        }
     }
 }
 
