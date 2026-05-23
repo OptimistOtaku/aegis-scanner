@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aegis is a zero-config pre-deployment security scanner for AI systems, detecting secrets, prompt injection boundaries, PII flows, hallucinated dependencies, and unsafe agent topology."
+    />
+    <title>Aegis Security Scanner</title>
+    <script type="module" crossorigin src="/aegis-scanner/assets/index-C5XTDAwg.js"></script>
+    <link rel="stylesheet" crossorigin href="/aegis-scanner/assets/index-RTPSuIXF.css">
+  </head>
+  <body>
+    <canvas id="aegis-scene" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Aegis home">
+        <span class="brand-mark">A</span>
+        <span>AEGIS</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#why">Why</a>
+        <a href="#modules">Modules</a>
+        <a href="#ci">CI</a>
+      </nav>
+      <a class="nav-cta" href="https://www.npmjs.com/package/@optimistotaku/aegis-scan" target="_blank" rel="noreferrer">
+        <i data-lucide="package"></i>
+        npm
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero temple-section">
+        <div class="terminal-window hero-terminal" aria-label="Animated Aegis scan output">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+            <strong>aegis-scan</strong>
+          </div>
+          <pre><code id="scan-output" aria-live="polite"></code><span class="terminal-caret" aria-hidden="true"></span></pre>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">Divine shield for AI-era code</p>
+          <h1>Aegis scans before the breach has a name.</h1>
+          <p class="hero-lede">
+            A zero-config pre-deployment scanner for AI systems: secrets, hallucinated packages,
+            prompt injection boundaries, raw PII flows, and unsafe agent topology.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <button class="copy-command" type="button" data-copy="npx @optimistotaku/aegis-scan .">
+              <i data-lucide="terminal"></i>
+              <span>npx @optimistotaku/aegis-scan .</span>
+            </button>
+            <a class="ghost-link" href="https://github.com/OptimistOtaku/aegis-scanner" target="_blank" rel="noreferrer">
+              <i data-lucide="github"></i>
+              Repository
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-bar" aria-label="Aegis package stats">
+        <div>
+          <strong>5</strong>
+          <span>AI security modules</span>
+        </div>
+        <div>
+          <strong>40+</strong>
+          <span>provider key patterns</span>
+        </div>
+        <div>
+          <strong>0</strong>
+          <span>config required</span>
+        </div>
+      </section>
+
+      <section id="why" class="threat-grid temple-section">
+        <div class="section-kicker">Why Aegis</div>
+        <h2>Generic scanners were not built for AI-shaped risk.</h2>
+        <div class="comparison" aria-label="Comparison with generic scanners">
+          <div class="comparison-row comparison-head">
+            <span>Threat vector</span>
+            <span>Generic scanners</span>
+            <span>Aegis</span>
+          </div>
+          <div class="comparison-row">
+            <span>Exposed API keys and secrets</span>
+            <span class="yes">covered</span>
+            <span class="yes">covered</span>
+          </div>
+          <div class="comparison-row">
+            <span>AI-hallucinated or squatted packages</span>
+            <span class="no">missed</span>
+            <span class="yes">guarded</span>
+          </div>
+          <div class="comparison-row">
+            <span>Prompt injection in system prompts</span>
+            <span class="no">missed</span>
+            <span class="yes">audited</span>
+          </div>
+          <div class="comparison-row">
+            <span>PII flowing raw into LLM APIs</span>
+            <span class="no">missed</span>
+            <span class="yes">traced</span>
+          </div>
+          <div class="comparison-row">
+            <span>Missing moderation filters and agent loops</span>
+            <span class="no">missed</span>
+            <span class="yes">gated</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="modules" class="modules temple-section">
+        <div class="section-kicker">Five shields</div>
+        <h2>Each module guards a different gate.</h2>
+        <div class="module-grid">
+          <article class="module-card">
+            <i data-lucide="key-round"></i>
+            <h3>Secrets Auditor</h3>
+            <p>High-fidelity provider patterns plus entropy checks for OpenAI, Anthropic, HuggingFace, AWS, GCP, and more.</p>
+          </article>
+          <article class="module-card">
+            <i data-lucide="box"></i>
+            <h3>Dependency Hallucination Guard</h3>
+            <p>Cross-references npm and PyPI for 404 packages and newly registered squatting risks.</p>
+          </article>
+          <article class="module-card">
+            <i data-lucide="message-square-warning"></i>
+            <h3>Prompt Injection Auditor</h3>
+            <p>Audits prompt construction and can opt into sandboxed adversarial fuzzing.</p>
+          </article>
+          <article class="module-card">
+            <i data-lucide="fingerprint"></i>
+            <h3>PII Taint Tracker</h3>
+            <p>Follows sensitive fields into completion APIs and flags unmasked model-bound data.</p>
+          </article>
+          <article class="module-card">
+            <i data-lucide="route"></i>
+            <h3>Topology Gatekeeper</h3>
+            <p>Checks agent graphs for moderation middleware, max-iteration guards, and recursive loop risk.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="ci" class="ci-section temple-section">
+        <div>
+          <div class="section-kicker">CI/CD hard gate</div>
+          <h2>Let deployment pass through the temple doors.</h2>
+          <p>
+            Aegis is designed to fail pipelines when findings meet your risk threshold and to emit
+            terminal, markdown, or JSON reports.
+          </p>
+        </div>
+        <div class="code-panel" aria-label="GitHub Actions example">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+            <strong>aegis.yml</strong>
+          </div>
+          <pre><code><span class="yaml-key">- name</span>: <span class="yaml-string">Aegis Security Scan</span>
+  <span class="yaml-key">run</span>: <span class="yaml-string">npx @optimistotaku/aegis-scan . --fail-on HIGH --format markdown --output aegis-report.md</span>
+
+<span class="yaml-key">- name</span>: <span class="yaml-string">Upload Aegis Report</span>
+  <span class="yaml-key">uses</span>: <span class="yaml-string">actions/upload-artifact@v3</span>
+  <span class="yaml-key">with</span>:
+    <span class="yaml-key">name</span>: <span class="yaml-string">aegis-security-report</span>
+    <span class="yaml-key">path</span>: <span class="yaml-string">aegis-report.md</span></code></pre>
+        </div>
+      </section>
+
+      <section class="cta temple-section">
+        <span class="watermark" aria-hidden="true">AEGIS</span>
+        <div class="section-kicker">Zero config</div>
+        <h2>Raise the shield in one command.</h2>
+        <button class="copy-command large" type="button" data-copy="npx @optimistotaku/aegis-scan .">
+          <i data-lucide="terminal"></i>
+          <span>npx @optimistotaku/aegis-scan .</span>
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <span>AEGIS</span>
+      <span>Apache-2.0 · Node >= 18 · Built for AI-driven codebases</span>
+    </footer>
+
+  </body>
+</html>
